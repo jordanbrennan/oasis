@@ -19,7 +19,7 @@
           <span class="icon-bar"></span>
         </button>
         
-        <%= link_to "Oasis", statuses_path, class: "navbar-brand" %>
+        <%= link_to "Oasis", feed_path, class: "navbar-brand" %>
         
       </div>
 
@@ -34,10 +34,10 @@
         <ul class="nav navbar-nav pull-right">
           <% if user_signed_in? %>
           <li><%= link_to current_user.full_name, edit_user_registration_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Log out", logout_path %></li>
           <% else %>
-          <li><%= link_to "Register", new_user_registration_path %></li>
-          <li><%= link_to "Log In", new_user_session_path %></li>
+          <li><%= link_to "Register", register_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
           <% end %> 
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -45,8 +45,13 @@
   </nav>
 
 <div class="container">
-         <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+      <% flash.each do |type, message| %>
+        <div class="alert <%= flash_class type %>">
+            <a href="#" class="alert-link close" data-dismiss="alert">x</a>
+            <%= message %>
+          </div>
+      <% end %>
+         
 
 
 <%= yield %>
