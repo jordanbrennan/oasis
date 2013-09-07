@@ -13,3 +13,6 @@ nav {
 .gravatar {
 	margin-right:15px;
 }
+.gravatar img {
+	border-radius:50px;
+}
