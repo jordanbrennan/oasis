@@ -7,3 +7,9 @@ nav, .navbar, .navbar-static-top, .navbar-default {
 nav {
   color: #fff;
 }
+
+
+
+.gravatar {
+	margin-right:15px;
+}
