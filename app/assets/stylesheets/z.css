@@ -1,5 +1,9 @@
 /* i dont know, this needs to process last to overwrite the wrest... */
 
+body {
+	padding-top:60px;
+	padding-bottom:0px;
+}
 
 nav, .navbar, .navbar-static-top, .navbar-default {
   background-color: #7a2bb7;
@@ -8,7 +12,9 @@ nav {
   color: #fff;
 }
 
-
+.container {
+	width: auto;
+}
 
 .gravatar {
 	margin-right:15px;
@@ -30,3 +36,21 @@ nav {
 	font-style:italic;
 	letter-spacing: 1px;
 }
+
+footer {
+	color:#5a5a5a;
+	height:60px;
+	margin:0;
+}
+.push {
+	height:70px;
+}
+
+
+
+
+
+
+
+
+
