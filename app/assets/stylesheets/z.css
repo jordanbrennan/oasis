@@ -1,0 +1,81 @@
+/* i dont know, this needs to process last to overwrite the wrest... */
+
+  /* backup colors...  refer to flat ui for most
+  purple- 7a2bb7 , 8E44AD, 9B59B6 
+  green- 16A085 , 1ABC9C , 27AE60 , 2ECC71
+  blue- 2980B9 , 3498DB 
+  */
+
+
+body {
+	padding-top:60px;
+	padding-bottom:0px;
+}
+
+nav, .navbar, .navbar-static-top, .navbar-default {
+  background-color: #16A085;
+}
+nav {
+  color: #fff;
+}
+
+.container {
+	width: auto;
+}
+
+.gravatar {
+	margin-right:15px;
+}
+.gravatar img {
+	border-radius:50px;
+}
+.btn {
+	background-color: #16A085;
+	border-color:#16A085;
+}
+.btn:hover {
+	background-color:#1ABC9C;
+	border-color:#1ABC9C;
+}
+
+
+
+
+.navbar-default .navbar-nav > li > a {
+	color:#FFFFFF;
+	font-size:15px;
+}
+.navbar-default .navbar-brand {
+	color:#fff;
+	font-size:20px;
+	font-style:italic;
+	letter-spacing: 1px;
+}
+
+footer {
+	color:#5a5a5a;
+	height:60px;
+	margin:0;
+}
+.push {
+	height:70px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+		.pull-right {
+			text-align:center;
+			float: left;
+		}
+		body {
+			padding-left:5px;
+			padding-right:5px;
+		}
+}
+
+
+

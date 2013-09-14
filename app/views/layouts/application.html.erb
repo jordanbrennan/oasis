@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oasis</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42121322-2', 'oasis15.herokuapp.com');
+    ga('send', 'pageview');
+
+ </script>
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+   <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <%= link_to "Oasis", feed_path, class: "navbar-brand" %>
+        
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Agenda</a></li>
+          <li><a href="#">Tasks</a></li>
+          <li><a href="#">Drive</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <% if user_signed_in? %>
+          <li><%= link_to current_user.full_name, edit_user_registration_path %></li>
+          <li><%= link_to "Log out", logout_path %></li>
+          <% else %>
+          <li><%= link_to "Register", register_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
+          <% end %> 
+        </ul>
+      </div><!-- /.navbar-collapse -->
+   </div>
+  </nav>
+
+<div class="container">
+      <% flash.each do |type, message| %>
+        <div class="alert <%= flash_class type %>">
+            <a href="#" class="alert-link close" data-dismiss="alert">x</a>
+            <%= message %>
+          </div>
+      <% end %>
+         
+
+
+        <%= yield %>
+
+
+        
+        <div class="push"></div>
+
+     <footer>
+        <p class="pull-right">
+          <a href="#">Back to Top</a>
+        </p>
+
+        <p>
+          &#169; 2013 Brennan Development, Inc
+        </p>
+     </footer>
+
+</div>
+</body>
+</html>
