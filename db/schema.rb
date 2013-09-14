@@ -11,7 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130914182545) do
+=======
+ActiveRecord::Schema.define(:version => 20130912003712) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "commentable_id",   :default => 0
+    t.string   "commentable_type", :default => ""
+    t.string   "title",            :default => ""
+    t.text     "body",             :default => ""
+    t.string   "subject",          :default => ""
+    t.integer  "user_id",          :default => 0,  :null => false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
+
+  add_index "comments", ["commentable_id", "commentable_type"], :name => "index_comments_on_commentable_id_and_commentable_type"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+>>>>>>> f94e41e58160975c29649e69e1cf4919bb733530
 
   create_table "statuses", :force => true do |t|
     t.text     "content"
@@ -22,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130914182545) do
 
   add_index "statuses", ["user_id"], :name => "index_statuses_on_user_id"
 
+<<<<<<< HEAD
   create_table "user_friendships", :force => true do |t|
     t.integer  "user_id"
     t.integer  "friend_id"
@@ -31,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20130914182545) do
 
   add_index "user_friendships", ["user_id", "friend_id"], :name => "index_user_friendships_on_user_id_and_friend_id"
 
+=======
+>>>>>>> f94e41e58160975c29649e69e1cf4919bb733530
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"

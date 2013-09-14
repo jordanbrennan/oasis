@@ -1,5 +1,6 @@
 /* i dont know, this needs to process last to overwrite the wrest... */
 
+<<<<<<< HEAD
   /* backup colors...  refer to flat ui for most
   purple- 7a2bb7 , 8E44AD, 9B59B6 
   green- 16A085 , 1ABC9C , 27AE60 , 2ECC71
@@ -7,13 +8,19 @@
   */
 
 
+=======
+>>>>>>> f94e41e58160975c29649e69e1cf4919bb733530
 body {
 	padding-top:60px;
 	padding-bottom:0px;
 }
 
 nav, .navbar, .navbar-static-top, .navbar-default {
+<<<<<<< HEAD
   background-color: #16A085;
+=======
+  background-color: #7a2bb7;
+>>>>>>> f94e41e58160975c29649e69e1cf4919bb733530
 }
 nav {
   color: #fff;
@@ -29,6 +36,7 @@ nav {
 .gravatar img {
 	border-radius:50px;
 }
+<<<<<<< HEAD
 .btn {
 	background-color: #16A085;
 	border-color:#16A085;
@@ -37,6 +45,8 @@ nav {
 	background-color:#1ABC9C;
 	border-color:#1ABC9C;
 }
+=======
+>>>>>>> f94e41e58160975c29649e69e1cf4919bb733530
 
 
 
@@ -65,6 +75,7 @@ footer {
 
 
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
 
 		.pull-right {
@@ -76,6 +87,9 @@ footer {
 			padding-right:5px;
 		}
 }
+=======
+
+>>>>>>> f94e41e58160975c29649e69e1cf4919bb733530
 
 
 
